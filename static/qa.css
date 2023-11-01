@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navcl{
+    background: rgb(25,77,143);
+    background: linear-gradient(90deg, rgba(25,77,143,1) 0%, rgba(217,223,249,1) 100%);
+}
+
+.middle1{
+    
+}
+
+.hover{
+    font-size: medium;
+    font-weight: 400;
+}
+
+.hover1:hover
+{
+    transition: 200ms;
+font-size: larger;
+color: rgb(71, 71, 163);
+font-weight: 600;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.hover2:hover
+{
+    transition: 200ms;
+font-size: larger;
+color: rgb(126, 176, 220);
+font-weight: 600;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}

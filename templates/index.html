@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz.com</title>
+  <link rel="stylesheet" href="/static/land.css">
+  
+ 
+</head>
+
+<body>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <div>
+    <nav>
+      <div
+        class="flex flex-row justify-start font-bold text-xl font-mullish text-white h-16  pr-2 navcl pl-4 pt-[1rem] space-x-3  rounded-lg">
+        <div class="hover2"><a href="/" ><u>Home</u></a></div>
+        <div class="hover2"><u href="/signup/" target="_blank">SignUp<u></div>
+        <div class="hover2"><a href="/score/" target="_blank"> <u>Leaderboard</u> </a> </div>
+      </div>
+    </nav>
+
+    <section>
+      <div class=" relative flex justify-center w-full items-center mt-5 min-h-[600px]">
+
+        <form action="/examML/" method="post">
+          <!-- Box -->
+          <!-- Grid Box -->
+          <div
+            class="bg-black relative grid grid-cols-2 space-x-10 space-y-8 mt-4 min-w-[80%] shadow-2xl shadow-slate-600 rounded-md h-[600px]">
+            <!-- Box 1 -->
+            <div
+              class="w-[400px] pt-4 max-h-[220px] ml-14 relative mt-7 cursor-pointer boxess hover:shadow-2xl  hover:shadow-sky-400">
+              <img src="./Images/current-icon.svg" alt="" class="bg-lightBlue absolute right-4 top-9  rounded-full">
+
+              <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                class="stroke-1 stroke-[#525a76] h-full w-full absolute z-[20] featureCardSVG transition-all duration-200"
+                style="stroke-opacity: 0.8">
+                <path d="m 0 6 a 6 6 0 0 1 6 -6 
+                h 250.32501220703125 
+                a 16 16 0 0 1 11 5 
+                l 77 77 
+                a 16 16 0 0 1 5 11 
+                v 126 
+                a 6 6 0 0 1 -6 6 
+                h -337.32501220703125 
+                a 6 6 0 0 1 -6 -6 
+                z" fill="#181C2E"></path>
+              </svg>
+
+              <!-- Box Content -->
+              <div class="flex flex-col text-violet-500 p-5 pt-5 py-1 z-[1000] 
+            absolute w-full justify-between space-y-1">
+
+                <!-- Heading and Para -->
+                <div class="flex flex-col space-y-2">
+                  <h3 class="font-mullish text-white font-bold text-xl">Machine Learning</h3>
+                  <p class="text-white-700">The field of study that gives computers the capability to learn patternsfrom
+                    different kinds of data </p>
+                  <br>
+                </div>
+                <!-- Know more -->
+                <div>
+                  <button class="hover2 text-lightBlue font-mullish font-bold ">Start Quiz</button>
+                  <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500 transition-all duration-200"></i>
+                </div>
+
+              </div>
+        </form>
+      </div>
+
+
+      <!-- Box 2 -->
+      <div
+        class="w-[400px] pt-4 max-h-[220px] relative cursor-pointer ml-3 hover:shadow-2xl text-violet-500 hover:shadow-sky-400">
+        <form action="/examWb/" method="POST">
+          <img src="./Images/current-icon.svg" alt="" class="bg-lightBlue absolute right-4 top-9  rounded-full">
+          <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            class="stroke-1 stroke-[#525a76] h-full w-full absolute z-[20] featureCardSVG transition-all duration-200"
+            style="stroke-opacity: 0.8">
+            <path d="m 0 6 
+                a 6 6 0 0 1 6 -6 
+                h 250.32501220703125 
+                a 16 16 0 0 1 11 5 
+                l 77 77 
+                a 16 16 0 0 1 5 11 
+                v 126 
+                a 6 6 0 0 1 -6 6 
+                h -337.32501220703125 
+                a 6 6 0 0 1 -6 -6 
+                z" fill="#181C2E"></path>
+          </svg>
+          <!-- Box Content -->
+          <div class="flex flex-col p-5 pt-5 py-1 z-[1000] 
+            absolute w-full justify-between space-y-12 text-violet-500">
+
+            <!-- Heading and Para -->
+            <div class="flex flex-col space-y-2">
+              <h3 class="font-mullish text-white font-bold text-xl">Web Developement</h3>
+
+              <p class="text-white-700 pt-2"> Web development refers to the creating, building, and maintaining of
+                Web Based Applications
+              </p>
+
+            </div>
+            <!-- Know more -->
+            <div>
+              <button class="hover2 text-lightBlue font-mullish font-bold ">Start Quiz</button>
+              <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500 transition-all duration-200"></i>
+
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+
+      <!-- Box 3 -->
+      <!--<form action="/examAndroid" method="POST">-->
+      <div class="w-[400px] pt-4 max-h-[200px] relative cursor-pointer hover:shadow-2xl  hover:shadow-sky-400 text-violet-500">
+        <form action="/examAndroid/" method="POST">
+        <img src="./Images/current-icon.svg" alt="" class="bg-lightBlue absolute right-4 top-9  rounded-full">
+
+        <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+          class="stroke-1 stroke-[#525a76] h-full w-full absolute z-[20] featureCardSVG transition-all duration-200"
+          style="stroke-opacity: 0.8">
+          <path d="m 0 6 
+                a 6 6 0 0 1 6 -6 
+                h 250.32501220703125 
+                a 16 16 0 0 1 11 5 
+                l 77 77 
+                a 16 16 0 0 1 5 11 
+                v 126 
+                a 6 6 0 0 1 -6 6 
+                h -337.32501220703125 
+                a 6 6 0 0 1 -6 -6 
+                z" fill="#181C2E"></path>
+        </svg>
+
+        <!-- Box Content -->
+        <div class="flex flex-col p-5 pt-5 py-1 z-[1000] 
+            absolute w-full justify-between space-y-12">
+
+          <!-- Heading and Para -->
+          <div class="flex flex-col space-y-2">
+            <h3 class="font-mullish text-white font-bold text-xl">Andriod Developement</h3>
+
+            <p class="text-white-700 pt-2">Test your Andriod knowledge</p>
+
+          </div>
+          <!-- Know more -->
+          <div>
+            <button class="hover2 text-lightBlue font-mullish font-bold ">Start Quiz</button>
+
+            <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500 transition-all duration-200"></i>
+          </div>
+
+        </div>
+        </form>
+      </div>
+
+      <!-- Box 4 -->
+        <div class="w-[400px] pt-4 max-h-[200px] relative cursor-pointer hover:shadow-2xl  hover:shadow-sky-400 text-violet-500">
+          <form action="/examCloud/" method="POST">
+          <img src="./Images/current-icon.svg" alt="" class="bg-lightBlue absolute right-4 top-9  rounded-full">
+          <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            class="stroke-1 stroke-[#525a76] h-full w-full absolute z-[20] featureCardSVG transition-all duration-200"
+            style="stroke-opacity: 0.8">
+            <path d="m 0 6 
+                        a 6 6 0 0 1 6 -6 
+                        h 250.32501220703125 
+                        a 16 16 0 0 1 11 5 
+                        l 77 77 
+                        a 16 16 0 0 1 5 11 
+                        v 126 
+                        a 6 6 0 0 1 -6 6 
+                        h -337.32501220703125 
+                        a 6 6 0 0 1 -6 -6 
+                        z" fill="#181C2E"></path>
+          </svg>
+
+          <!-- Box Content -->
+          <div class="flex flex-col p-5 pt-5 py-1 z-[1000] absolute w-full justify-between space-y-12">
+            <!-- Heading and Para -->
+            <div class="flex flex-col space-y-2">
+              <h3 class="font-mullish text-white font-bold text-xl">Cloud Computing</h3>
+              <p class="text-white-700 ">Cloud computing is the on-demand field for all sort of computer services
+              </p>
+            </div>
+            <!-- Know more -->
+            <div>
+              <button class="hover2 text-lightBlue font-mullish font-bold ">Start Quiz</button>
+              <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500 transition-all duration-200"></i>
+            </div>
+
+          </div>
+        </div>
+      </form>
+  </div>
+  </div>
+  </section>
+
+
+
+
+  <!-- Footer -->
+
+  <section class="bg-[#000101] relative mt-4 flex flex-col rounded-md">
+    <div class="text-center text-2xl font-bold text-white pl-40 mt-3">
+      <p>Learning Resources</p>
+    </div>
+    <div class="flex flex-row justify-evenly mt-7 ">
+      <div class="flex flex-col max-w-[370px]">
+        <img src="/static/Images/quiz.jpg" alt="" height="70px" width="200px" class="cursor-pointer">
+      </div>
+      <div class="flex flex-col ">
+        <a href="https://www.mathworks.com/discovery/machine-learning.html"><h2 class="text-white font-bold text-xl mb-6">Machine Learning</h2></a>
+        <div class="flex flex-col space-y-2">
+          <p class="text-white"><a href="https://www.geeksforgeeks.org/types-of-regression-techniques/">Regression</a></p>
+          <p class="text-white"><a href="https://www.javatpoint.com/classification-algorithm-in-machine-learning">Classification</a></p>
+          <p class="text-white"><a href="https://scikit-learn.org/stable/modules/clustering.html">Clustering</a></p>
+        </div>
+      </div>
+      <div class="flex flex-col ">
+        <a href="https://www.w3schools.com/whatis/"><h2 class="text-white font-bold text-xl mb-6">Web Developement</h2></a>
+        <div class="flex flex-col space-y-2">
+          <p class="text-white"><a href="https://www.geeksforgeeks.org/cloud-computing/">HTML</a></p>
+          <p class="text-white"><a href="https://www.geeksforgeeks.org/css-introduction/">CSS</a></p>
+          <p class="text-white"><a href="https://www.w3schools.com/Js/">JavaScript</a></p>
+        </div>
+      </div>
+      <div class="flex flex-col ">
+        <a href="https://www.geeksforgeeks.org/introduction-to-android-development/"><h2 class="text-white font-bold text-xl mb-6">Android Development</h2></a>
+        <div class="flex flex-col space-y-2">
+          <p class="text-white"><a href="https://www.geeksforgeeks.org/introduction-to-java/">Introduction to java</a></p>
+          <p class="text-white"><a href="https://kotlinlang.org/">Kotlin</a></p>
+          <p class="text-white"><a href="https://developer.android.com/courses">Android Studio</a></p>
+        </div>
+      </div>
+      <div class="flex flex-col ">
+        <a href="https://www.geeksforgeeks.org/cloud-computing/"><h2 class="text-white font-bold text-xl mb-6">Cloud Computing</h2></a>
+      </div>
+    </div>
+    <div class="bg-[#2f3939] h-[0.15rem] w-full mt-12"></div>
+    <div class="flex flex-row justify-center items-center mt-14  relative ">
+      <h2 class="text-white">Register for Free</h2>
+      <button
+        class="bg-lightBlue text-white font-bold rounded-md w-24 justify-center h-7 ml-3 hover:text-gray-100 hover:bg-blue-500 shadow-md shadow-white ">Sign
+        Up</button>
+    </div>
+    <div class="bg-[#2f3939] h-[0.15rem] w-full mt-10"></div>
+    <div class="flex flex-row mx-auto space-x-7 mt-10 ">
+      <img src="/static/Images/facebook-icon.svg" alt="" class="cursor-pointer">
+      <img src="/static/Images/instagram-icon.svg" alt="" class="cursor-pointer">
+      <img src="/static/Images/linkedin-icon.svg" alt="" hight="30px" width="30px" class="rounded-xl cursor-pointer">
+      <img src="/static/Images/twitter-icon.svg" alt="" class="cursor-pointer">
+    </div>
+    <div class="flex flex-row justify-center items-center bg-[#252c2d] h-10 text-white mt-5">
+      <p>&#169; 2023 Copyright. Quiz.com </p>
+    </div>
+
+  </section>
+
+  </div>
+</body>
+
+</html>

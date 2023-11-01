@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/static/qa.css">
+  <script type="text/javascript"> 
+    window.history.forward(); 
+    function noBack() { 
+        window.history.forward(); 
+      } 
+ </script>
+
+</head>
+
+<body>
+  <!-- Wrapper -->
+  <div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Navigation Tag -->
+    <nav class="navcl flex justify-between text-center">
+
+      <p class="inline-block p-3 font-bold text-white text-2xl pr-[35rem]">Solve The Quiz....</p>
+
+
+
+    </nav>
+
+    <section>
+      <form action="/result/" method="POST">
+        <!-- External Div -->
+        <div class="middle1 relative flex justify-center items-center h-full">
+
+          <!-- For Arranging in Middle -->
+          <div
+            class=" mt-5 mb-8 ml-14 mr-4 bg-blue-900 text-white w-[40rem] flex flex-col space-y-16 items-center shadow-xl shadow-white justify-center pt-10 ">
+
+            <!-- First Question Div -->
+            {% for i in questions %}
+            <div>
+              <p class="bg-slate-400 w-[30rem] font-bold rounded-2xl text-gray-100 text-center min-h-[3rem] pt-1 mb-2">
+                {{i[1]}}</p>
+
+              <div>
+                <input type="radio" id={{i[0]}} name={{i[0]}} value="1">
+                {{i[2]}}
+              </div>
+
+              <div>
+                <input type="radio" id={{i[0]}} name={{i[0]}} value="2">
+                 {{i[3]}}
+              </div>
+
+              <div>
+                <input type="radio" id={{i[0]}} name={{i[0]}} value="3">
+                {{i[4]}}
+              </div>
+
+              <div>
+                <input type="radio" id={{i[0]}} name={{i[0]}} value="4">
+                {{i[5]}}
+              </div>
+
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+        <button id="sub">Data</button>
+      </form>
+
+    </section>
+    <br>
+
+
+
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="/static/land.css">
+    <style>
+        /*nav{
+        font-size: 25px;
+        padding: 10px;
+        background: #194D8F;
+        margin: 0;
+        width: 100%;
+        height: 40px;
+       flex-shrink: 0;
+    }*/
+    /*nav ul li{
+        list-style-type: none;
+        display: inline-block;
+        padding: 1px 20px;
+       
+        margin-top: 1px;
+    
+    }
+    nav ul li a{
+        font-weight: bold;
+        color: rgb(245, 242, 242);
+    
+        text-decoration:none ;
+    }*/
+    .rectangle-2,
+.rectangle-2 * {
+  box-sizing: border-box;
+}
+.rectangle-2 {
+  background:#060101;
+  width: 800px;
+  height: 700px;
+  position: relative;
+  box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 4px 4px 0px rgba(0, 0.25, 0.25, 0);
+    margin-top: 5%;
+    margin-left: 16%;
+    margin-right: 17%;
+    margin-bottom:8%;
+}
+.leaderboard{
+    width: 810px;
+height: 93px;
+flex-shrink: 0;
+color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+/* Codepen Specific */
+* {
+    margin:0;
+    padding:0;
+    font-family:Helvetica, Arial, sans-serif;
+  }
+  body {
+    background:#ffffff;
+  }
+  input[type=text], textarea, input[type=email], input[type=password], input[type=tel], input[type=url], input[type=search], input[type=date] {
+      padding: 10px;
+      width: 100%;
+      font-size: 14px;
+      font-family: inherit;
+      line-height: 24px;
+      color: #555;
+      background-color: #f1f1f1;
+      border: none;
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+  }
+  input[type=text], textarea, input[type=email], input[type=password], input[type=tel], input[type=url], input[type=search], input[type=date], .material.woocommerce-page[data-form-style="default"] input#coupon_code {
+      background-color: rgba(0,0,0,0.1);
+      border-radius: 4px;
+      border: 2px solid rgba(0,0,0,0);
+  }
+  /* /end Codepen Specific */
+  /* Ladder Navigation */
+    #leaderboard {
+        padding:50px;
+    }
+    .ladder-nav {
+        display:flex;
+        flex-wrap:wrap;
+        align-items: center;
+        background:#5055CB;
+        padding:5px 33px;
+        border-radius:6px;
+        border:1px solid #686EF9;
+    }
+    .ladder-title {
+      flex:2;
+      margin-bottom: 10px;
+    }
+    .ladder-search {
+      flex:1;
+      padding-right:25px;
+      
+    }
+    .ladder-title {
+      font-size:20px;
+      color:#888DFF!important;
+      font-weight:bold;
+      text-transform:uppercase;
+    }
+    .ladder-search input {
+        color:white
+    }
+    .ladder-search input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #888DFF;
+    }
+    .ladder-search input::-moz-placeholder { /* Firefox 19+ */
+        color: #888DFF;
+    }
+    .ladder-search input:-ms-input-placeholder { /* IE 10+ */
+        color: #888DFF;
+    }
+    .ladder-search input:-moz-placeholder { /* Firefox 18- */
+        color: #888DFF;
+    }
+  /* /end Ladder Navigation */
+  /* Leaderboard Results */
+  .leaderboard-results {
+    text-align:left;
+    border-collapse: collapse;
+  }
+  .leaderboard-results thead th {
+    padding: 25px;
+    color:#747474;
+    font-size:14px;
+    font-weight:bold;
+  }
+  .leaderboard-results tbody td {
+    padding:15px 25px;
+    background:#1a1a1a;
+    font-size:16px;
+    border-bottom:5px solid #232323;
+  }
+  .leaderboard-results tbody td:nth-of-type(7) {
+    font-weight:bold;
+  }
+  .leaderboard-results tbody tr:hover td {
+      background:#1d1d1d;
+  }
+  .leaderboard-results tbody tr {
+    color:#747474;
+  }
+  .leaderboard-results tbody tr:first-child {
+    color:#686EF9;
+  }
+  .leaderboard-results tbody span {
+    font-weight:bold;
+    padding:10px 15px;
+    border-radius:50%;
+  }
+  .leaderboard-results tbody tr:first-child span {
+    background:#5055CB;
+    color:white;
+  }
+  .leaderboard-results tbody tr span {
+    background:#262626;
+    color:#747474;
+  }
+  /* /end Leaderboard Results */
+
+        
+      
+    </style>
+</head>
+<body>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <nav>
+    <div class="flex flex-row justify-start font-bold text-xl font-mullish text-white h-16  pr-2 navcl pl-4 pt-[1rem] space-x-3  rounded-lg">
+      <div class="hover2"><a href="/" ><u>Home</u></a></div>
+      <div class="hover2"><u>SignUp<u></div>
+      <div class="hover2"><a href="/score"> <u>Leaderboard</u> </a> </div>
+  </div>
+</nav>
+<div class="rectangle-2">
+    
+    <div class="container-wrap">
+        <section id="leaderboard">
+            <nav class="ladder-nav">
+                <div class="ladder-title">
+                <h1 style="font-weight: bold;color: white;" >{{db}}  Scoresheet</h1>
+                </div>
+                <div class="ladder-search">
+                    <!--<input type="text" id="search-leaderboard" class="live-search-box" placeholder="Search Team, Player..." />-->
+                </div>
+            </nav>
+            <table id="rankings" class="leaderboard-results" width="100%">
+                <thead>
+                    <tr>
+                        <th style="color:white;">Rank</th>
+                        <th style="color: white;">Username</th>
+                        <th style="color: white;" >Score</th>
+                        
+                    </tr>
+                </thead>
+                <tbody >
+                  {% for i in range(n) %}
+                  <tr style="color: #cfe4fd;">
+                    <td >{{i+1}}</td>
+                    <td>{{Exam[i][0]}}</td>
+                    <td>{{Exam[i][1]}}</td>
+                  </tr>
+                  {% endfor %}
+                 
+                </tbody>
+            </table>
+        </section>
+</div>
+
+</div>
+</body>
+</html>
